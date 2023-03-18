@@ -1,0 +1,21 @@
+getuser api
+
+
+localhost:5001/api/auth/getuser
+1.login user and take the authToken 
+example:
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQxNTdjYjhmZTc1NzhhYzU3MWVlNzdlIn0sImlhdCI6MTY3OTEzMTQzNX0.fz0-pMOQxXvWrB30Y8ke3DuDewMMZ9kb52BNsNXT_9c"
+
+
+2.goto getuser api and in header put
+auth-token and in value paste the above token
+
+then the data from the authtoken will be extracted except the password since we have done select(-"password"):
+example :
+{
+  "_id": "64157cb8fe7578ac571ee77e",
+  "name": "Sandy",
+  "email": "sandy@gmail.com",
+  "date": "2023-03-18T08:56:24.332Z",
+  "__v": 0
+}
